@@ -1,7 +1,7 @@
 <template>
   <div :class="{fullscreen:fullscreen}" class="tinymce-container editor-container">
     <textarea :id="tinymceId" class="tinymce-textarea"/>
-    <div class="editor-custom-btn-container">
+    <div class="editor-custom-btn-container" style="top: 0px">
       <editorImage color="#1890ff" class="editor-upload-btn" @successCBK="imageSuccessCBK"/>
     </div>
   </div>
@@ -33,12 +33,13 @@ export default {
     },
     menubar: {
       type: String,
-      default: 'file edit insert view format table'
+      default: ''
+      // default: 'file edit insert view format table'
     },
     height: {
       type: Number,
       required: false,
-      default: 360
+      default: 260
     }
   },
   data() {
