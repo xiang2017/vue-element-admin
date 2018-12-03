@@ -29,3 +29,18 @@ export function deleteLabel(id) {
     method: 'delete'
   })
 }
+
+export function showLabel(id){
+  return request({
+    url: '/show_label/' + id,
+    method: 'post'
+  })
+}
+
+
+export function hideLabel(id){
+  return request({
+    url: '/hide_label/' + id,
+    method: 'post'
+  })
+}
